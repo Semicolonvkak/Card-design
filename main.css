@@ -1,0 +1,166 @@
+* {
+    transition: 0.4s;
+    box-sizing: border-box;
+    font-family: montserrat;
+    margin: 0;
+    padding: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+*:hover {
+    transition: 0.4s;
+}
+
+html {
+    --green-clr: #00C67C;
+    --dark-clr: #2F4858;
+}
+
+/*
+------CLASSES MAPPING------
+
+.card{
+    .card-head{
+        <img>
+        <h1>{
+            .h1--heading,
+            .h1--price,
+            .h1--unit
+        }
+    }
+
+    .card-body{
+        .card-features{
+        <ul>{
+            <li>{
+                    <img>
+                    <span>
+                }
+            }
+        }
+
+        .card--cta{
+            <button>
+        }
+    }
+    .card--water-mark{}
+}
+
+*/
+
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(252, 252, 252, 0.65);
+
+    color: white;
+}
+
+
+.card {
+    width: 410px;
+    height: 600px;
+
+    background-color: var(--dark-clr);
+
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 211, 132, 0.65);
+}
+
+
+.card-head {
+    height: 170px;
+    border-radius: 20px;
+
+    background-image: url(images/big_fluid_paint.svg);
+    background-position: -65px bottom;
+    background-size: 650px 320px;
+    padding: 15px;
+}
+
+
+.card-head > h1 {
+    text-align: center;
+}
+
+.card-head > h1 .h1--heading {
+    font-weight: 400;
+    font-size: 30px;
+}
+
+.card-head > h1 .h1--price {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.card-head > h1 .h1--unit {
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.card-body {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100% - 170px);
+    justify-content: space-evenly;
+}
+
+.card-body .card-features ul {
+    list-style: none;
+}
+
+.card-body .card-features ul li {
+    margin-bottom: 14px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 15px;
+    opacity: 0.9;
+}
+
+.card-body .card-features ul li img {
+    margin-right: 10px;
+}
+
+.card-body .card--cta button {
+    padding: 10px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    background: rgba(0, 198, 124, 0.5);
+    cursor: pointer;
+}
+
+.card-body .card--cta button:hover {
+    background: var(--green-clr);
+}
+
+.card > .card--water-mark {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background: url(images/water_mark.svg) no-repeat;
+    border-radius: 20px;
+    top: -100px;
+    opacity: 0.2;
+    left: calc(100% - 100px);
+}
+
+
+
+
+/**/
